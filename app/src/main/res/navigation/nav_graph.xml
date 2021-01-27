@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_profile">
+    <fragment
+        android:id="@+id/navigation_play"
+        android:name="com.example.chess.fragments.PlayFragment"
+        android:label="Play">
+        <action
+            android:id="@+id/action_navigation_play_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <argument
+            android:name="notSigned"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.chess.fragments.ProfileFragment"
+        android:label="Profile"/>
+</navigation>
